@@ -3,11 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:title="Fullscreen"
+        android:icon="@drawable/fullscreen"
+        android:visible="true"
+        app:showAsAction="always"
+        android:id="@+id/menuFullscreen" />
+
+    <item
         android:title="Settings"
         android:icon="@drawable/settingsicon"
         android:visible="true"
         app:showAsAction="always"
-        android:id="@+id/menuSettings"/>
+        android:id="@+id/menuSettings" />
 
 
 </menu>
