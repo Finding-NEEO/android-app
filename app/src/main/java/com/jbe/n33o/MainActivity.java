@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         discoverypopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DiscoveryActivity.class);
+                Intent intent = new Intent(MainActivity.this, ServiceDiscovery.class);
                 startActivity(intent);
 
             }

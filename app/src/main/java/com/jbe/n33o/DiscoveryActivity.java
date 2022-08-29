@@ -11,9 +11,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.nsd.NsdManager;
+import android.net.nsd.NsdServiceInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,6 +33,7 @@ import java.net.ConnectException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class DiscoveryActivity extends AppCompatActivity {
 
@@ -153,7 +158,7 @@ public class DiscoveryActivity extends AppCompatActivity {
     } // end onCreate
 
 
-
+// DISCOVERY BY SCANNING PORT 3200
     public static boolean isPortOpen(final String ip, final int port, final int timeout) {
 
         try {
@@ -226,6 +231,13 @@ public class DiscoveryActivity extends AppCompatActivity {
 
         return ipString;
     }
+    // END OF DISCOVERY BY SCANNING PORT 3200
+
+
+
+
+
+
 
     private void dialogSettings(){
         customDialogIp.setContentView(R.layout.custompopupip);
